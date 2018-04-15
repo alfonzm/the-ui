@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% if page.hideheader != true %}
+      {% include header.html %}
+    {% endif %}
+
+    <div class="page-content">
+      <div class="wrapper" id="{{ page.wrapper_id }}">
+        {{ content }}
+      </div>
+    </div>
+
+    
+    {% if page.hideheader != true %}
+      {% include footer.html %}
+    {% endif %}
+
+  </body>
+
+</html>

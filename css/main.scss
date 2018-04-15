@@ -1,0 +1,66 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@font-face{font-family: Avenir; font-weight: 500; src: url("../fonts/roman.otf"); }
+@font-face{font-family: Avenir; font-weight: 300; src: url("../fonts/light.otf"); }
+@font-face{font-family: Avenir; font-weight: 700; src: url("../fonts/black.otf"); }
+
+@font-face{font-family: Avenir; font-weight: 500; font-style: italic; src: url("../fonts/oblique.otf"); }
+@font-face{font-family: Avenir; font-weight: 300; font-style: italic; src: url("../fonts/lightoblique.otf"); }
+@font-face{font-family: Avenir; font-weight: 700; font-style: italic; src: url("../fonts/blackoblique.otf"); }
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i');
+// @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
+
+// Our variables
+$serif-font: 'Cormorant Garamond', serif;
+$base-font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   14pt;
+$base-font-weight: 400;
+$large-font-size:  $base-font-size * 1.1;
+$medium-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 0.75;
+$base-line-height: 1.75;
+
+$spacing-unit:     30px;
+
+$text-color:       #333;
+$background-color: #ffffff;
+$brand-color:      darken(tomato,20%);
+// $brand-color:      rgba(157, 39, 32, 255);
+
+$grey-color:       #828282;
+$grey-color-lightish: lighten($grey-color, 20%);
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    768px;
+
+$on-palm:          600px;
+$on-laptop:        $content-width;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
