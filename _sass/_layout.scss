@@ -15,19 +15,19 @@ $navbar-height: 64px;
 .site-title {
     text-transform: lowercase;
     line-height: 1em;
-    font-size: 36pt;
+    font-size: 30pt;
     font-weight: 300;
     font-family: $serif-font;
     color: black;
     margin-bottom: 10px;
-    display:block;
 
     &:hover {
-        border: none;
+        // border: none;
     }
 }
 
 .site-nav {
+    margin-top: 10px;
     display: block;
 
     font-size: 13pt;
@@ -132,11 +132,6 @@ $navbar-height: 64px;
         }
     }
 
-
-    p {
-        margin-bottom: 0;
-    }
-
     a.read-more {
         font-size: 12pt;
         text-transform: lowercase;
@@ -149,19 +144,6 @@ $navbar-height: 64px;
     font-weight: 300;
     font-size: 12pt;
 }
-
-.post-link {
-    font-size: 24pt;
-    font-weight: 400;
-    line-height: 1.2em;
-    margin: 0;
-    
-    a {
-        color: $text-color;
-    }
-}
-
-
 
 /**
  * Posts
@@ -208,11 +190,13 @@ $navbar-height: 64px;
     margin: 0;
 }
 
-.post-content {
+.post .post-content {
     margin-bottom: $spacing-unit;
+}
 
-    p{
-        margin: 1.1em 0;
+.post-content {
+    p:last-child {
+        margin-bottom: 0;
     }
 
     h1, h2, h3 {
@@ -257,8 +241,7 @@ $navbar-height: 64px;
         margin: 1.2em auto;
 
         &.shadowed {
-            box-shadow: 0px 15px 20px rgba(0,0,0,0.4);
-            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 50px;
         }
     }
